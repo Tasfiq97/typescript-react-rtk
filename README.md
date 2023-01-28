@@ -1,19 +1,22 @@
-# Getting Started with Create React App
 
-           ### install react-redux and redux-toolkit for state management 
+### live link of the project: https://typescript-react-rtk.vercel.app/
 
-    ### install ant design using npm install
+ ## dependencies
+
+## install react-redux and redux-toolkit for state management 
+
+## install ant design using npm install
  
-    ### install react router dom 
+## install react router dom 
 
-# to install eslint in typescript:
-    ## first npm install eslint --save-dev
-    ## npx eslint --init
-    ## What type of modules does your project use?
+## to install eslint in typescript:
+    first npm install eslint --save-dev
+    npx eslint --init
+     What type of modules does your project use?
      Selected: JavaScript modules (import/export)
-     ## Which framework does your project use?
+      Which framework does your project use?
          Select: React
-         ## Does your project use TypeScript?
+          Does your project use TypeScript?
              Selected: Yes
              Where does your code run?
                Selected: Browser
@@ -26,8 +29,8 @@
                     Which style guide do you want to follow?
              Selected: Airbnb: https://github.com/airbnb/javascript
 
-               # deployment
-            ## npm install vercel
+               deployment
+                npm install vercel
               comm vercel 
               Set up and deploy “D:\typescript-react-rtk”? y
               Link to existing project?  n
@@ -37,6 +40,5 @@
               building complete
               deployment complete
 
-              ##  
+               
 
-    # live link of the project: https://typescript-react-rtk.vercel.app/

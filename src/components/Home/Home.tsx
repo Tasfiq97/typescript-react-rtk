@@ -6,7 +6,7 @@ import { Card, Col, Row } from 'antd';
 import { Input, Space } from 'antd';
 import { Launch } from '../../app/models/models';
 import { Button } from 'antd';
-
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const { Search } = Input;
@@ -14,7 +14,7 @@ export default function Home() {
     const [display,setDisplay]=useState<Launch[]>();
     const [lauch,setLaunch]=useState<Launch[]>();
     const {data,error,isLoading,isFetching,isSuccess}=useLaunchesQuery();
-
+   
     useEffect(()=>{
         setLaunch(data);
            setDisplay(data);
@@ -32,6 +32,8 @@ export default function Home() {
        const filteredVal=data?.filter(items=>items.launch_success===val);
        setDisplay(filteredVal);
     }
+
+   
     
   return (
     
@@ -79,6 +81,7 @@ export default function Home() {
                             hoverable
                             style={{ width: 240 }}
                             key={launcher.flight_number}
+                
                             cover={<img alt="example" src={launcher.links.mission_patch_small} />}
                           >
                             <Meta title={launcher.rocket.rocket_name}   />
@@ -87,6 +90,14 @@ export default function Home() {
                             <p>Nationality :{launcher.rocket.second_stage.payloads[0].nationality}</p>
                             <p>Launch site : {launcher.launch_site.site_name_long}</p>
                             <p>Launch success : <span>{launcher.launch_success===true?<span style={{color:"green",fontWeight:"bold"}}>true</span> : <span style={{color:"red",fontWeight:"bold"}}>false</span>}</span> </p>
+                            <Space direction="vertical" style={{ width: '100%' }}>
+                           <Link to={`/detail/${launcher.flight_number}`}>
+                           <Button type="primary" ghost>
+      Details
+    </Button>
+                           </Link>
+    
+  </Space>
                           </Card>
                           </Col>
                             

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import {useState,useEffect} from 'react'
 import { Layout, Space ,Typography} from 'antd';
 import { useLaunchesQuery } from '../../../app/api/api';
 import { Launch } from '../../../app/models/models';
@@ -10,10 +9,12 @@ const { Text, Link } = Typography;
 
 export default function DetailPage() {
 
+  //  fetch id from useparam 
   const { launchId } = useParams();
 
   const {data,error,isLoading,isFetching,isSuccess}=useLaunchesQuery();
-
+  
+  // filtering data using id 
   const filteredData=data?.filter(data=>data.flight_number.toString()===launchId);
 
   const contentStyle: React.CSSProperties = {

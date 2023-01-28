@@ -1,10 +1,10 @@
 # Getting Started with Create React App
 
-# install react-redux and redux-toolkit for state management 
+           ### install react-redux and redux-toolkit for state management 
 
-# install ant design using npm install
-
-# install react router dom 
+    ### install ant design using npm install
+ 
+    ### install react router dom 
 
 # to install eslint in typescript:
     ## first npm install eslint --save-dev
